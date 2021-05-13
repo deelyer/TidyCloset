@@ -1,0 +1,37 @@
+{
+  "name": "Timmy",
+  "age": 24,
+  "gender": "male",
+  "weight": 140.00,
+  "height": 177.00,
+  "bottoms": [
+    {
+      "description": "blue express shorts",
+      "price": 24.99,
+      "type": "SHORTS",
+      "size": "SMALL",
+      "brand": "EXPRESS",
+      "colour": "BLACK",
+      "reference": "123456"
+    }, {
+      "description": "white express shorts",
+      "price": 24.99,
+      "type": "SHORTS",
+      "size": "SMALL",
+      "brand": "EXPRESS",
+      "colour": "WHITE",
+      "reference": "456789"
+    }
+  ],
+  "tops": [
+    {
+      "description": "black express T-shirt",
+      "price": 24.99,
+      "type": "TSHIRT",
+      "size": "SMALL",
+      "brand": "EXPRESS",
+      "colour": "BLACK",
+      "reference": "147258"
+    }
+  ]
+}

@@ -72,7 +72,7 @@ public class JSONReader {
     private void addBottom(TidyCloset closet, JSONObject jsonObject) {
         String description = jsonObject.getString("description");
         double price = jsonObject.getDouble("price");
-        Bottom.BottomType type = Bottom.BottomType.valueOf(jsonObject.getString("type"));
+        BottomType type = BottomType.valueOf(jsonObject.getString("type"));
         Size size = Size.valueOf(jsonObject.getString("size"));
         Brand brand = Brand.valueOf(jsonObject.getString("brand"));
         ColourType colour = ColourType.valueOf(jsonObject.getString("colour"));
@@ -83,7 +83,7 @@ public class JSONReader {
     private void addTop(TidyCloset closet, JSONObject jsonObject) {
         String description = jsonObject.getString("description");
         double price = jsonObject.getDouble("price");
-        Top.TopType type = Top.TopType.valueOf(jsonObject.getString("type"));
+        TopType type = TopType.valueOf(jsonObject.getString("type"));
         Size size = Size.valueOf(jsonObject.getString("size"));
         Brand brand = Brand.valueOf(jsonObject.getString("brand"));
         ColourType colour = ColourType.valueOf(jsonObject.getString("colour"));

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Person {
     private String name;
     private int age;
@@ -62,5 +64,22 @@ public class Person {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                Double.compare(person.weight, weight) == 0 &&
+                Double.compare(person.height, height) == 0 &&
+                Objects.equals(name, person.name) &&
+                Objects.equals(gender, person.gender);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, gender, weight, height);
     }
 }

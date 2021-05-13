@@ -3,10 +3,9 @@ package model;
 import org.json.JSONObject;
 import persistence.Writable;
 
+import java.util.Objects;
+
 public class Bottom implements Writable {
-    public enum BottomType {
-        SPORT_SHORTS, SHORTS, JEANS, PANTS, SWEATS
-    }
 
     private String description;
     private double price;
@@ -59,5 +58,22 @@ public class Bottom implements Writable {
         return json;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bottom)) return false;
+        Bottom bottom = (Bottom) o;
+        return Double.compare(bottom.price, price) == 0 &&
+                Objects.equals(description, bottom.description) &&
+                type == bottom.type &&
+                size == bottom.size &&
+                brand == bottom.brand &&
+                colour == bottom.colour &&
+                Objects.equals(itemReference, bottom.itemReference);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(description, price, type, size, brand, colour, itemReference);
+    }
 }
